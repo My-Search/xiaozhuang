@@ -160,14 +160,14 @@ touch /etc/mihomo/sub.yaml
 #合并脚本
 sudo tee /etc/mihomo/merge-config.sh > /dev/null << 'EOF'
 #!/bin/bash
-# ============================================================
+#============================================================
 #merge-config.sh - Mihomo 混合配置合并脚本
 #合并 /etc/mihomo/fixed.yaml（固定配置，优先级最高）
 #与   /etc/mihomo/sub.yaml （订阅动态部分）生成 config.yaml
 #
 #用法: bash /etc/mihomo/merge-config.sh
 #由 mihomo.service 的 ExecStartPre 调用，重启自动合并
-# ============================================================
+#============================================================
 set -euo pipefail
 
 MIHOMO_DIR="/etc/mihomo"
